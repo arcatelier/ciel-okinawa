@@ -54,6 +54,11 @@
   max-height: 50px;
   width: clamp(120px, 100%, 170px);
   padding: 16px;
+
+  @include sp {
+    margin: 30px auto 0;
+    order: 4;
+  }
 }
 
 .c-btn--footerButton--sizeM {

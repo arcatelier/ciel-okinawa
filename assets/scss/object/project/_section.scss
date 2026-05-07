@@ -30,6 +30,11 @@
   flex-direction: column;
   align-items: flex-start;
   max-width: 350px;
+
+  @include sp {
+    width: 100%;
+    display: contents;
+  }
 }
 
 .p-section__text--right {
@@ -39,6 +44,11 @@
 .p-section__contentsWrap {
   display: flex;
   gap: 15px;
+
+  @include sp {
+    width: 100%;
+    order: 3;
+  }
 }
 
 .p-section__content {
@@ -55,7 +65,9 @@
 .p-section__concept {
   display: flex;
   flex: 1;
-  overflow: visible;
+  overflow: hidden;
+  position: relative;
+  min-height: 700px;
 }
 
 .p-section--textBox {

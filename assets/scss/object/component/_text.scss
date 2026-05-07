@@ -50,6 +50,10 @@
 .c-text--section {
   padding: 50px 0;
   text-align: left;
+
+  @include sp {
+    order: 2;
+  }
 }
 
 .c-text--section--largeSpace {

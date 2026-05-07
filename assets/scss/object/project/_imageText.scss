@@ -4,6 +4,7 @@
   display: block;
   position: relative;
   overflow: hidden;
+  aspect-ratio: 3 / 4;
 
   &::before {
     content: "";

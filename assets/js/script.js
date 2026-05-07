@@ -98,27 +98,28 @@ window.addEventListener("load", () => {
   /**
    * スクロールしたときの画像位置固定？？
    */
-  function imageScrollInside() {
-    const images = document.querySelectorAll(
-      ".c-img--concept, .c-img--viewport, .c-img--about, .c-img--columnImage"
-    );
+  function parallaxImage() {
+    const images = document.querySelectorAll(".js-parallaxImage");
 
-    lenis.on("scroll", () => {
-      images.forEach((img) => {
-        const rect = img.getBoundingClientRect();
+    images.forEach((image) => {
+      const rect = image.getBoundingClientRect();
 
-        const progress = Math.min(
-          Math.max((window.innerHeight - rect.top) / window.innerHeight, 0),
-          1
-        );
+      const scrollPercent =
+        (window.innerHeight - rect.top) /
+        (window.innerHeight + rect.height);
 
-        // 上 → 下へ移動
-        const positionY = progress * 200;
+      const move = (scrollPercent - 0.5) * 80;
 
-        img.style.objectPosition = `center ${positionY}%`;
-      });
+      image.style.setProperty(
+        "--parallax",
+        `${move}px`
+      );
     });
   }
+
+  lenis.on("scroll", () => {
+    parallaxImage();
+  });
 
   /**
    * フッターの画像
@@ -170,6 +171,6 @@ window.addEventListener("load", () => {
   slideImage();
   scrollZoom();
   link();
-  imageScrollInside();
   changeButtonText();
+  parallaxImage();
 });
