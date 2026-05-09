@@ -73,7 +73,6 @@
   --parallax: 0px;
   height: 120%;
   transform: translateY(var(--parallax));
-  position: absolute;
   inset: -10% 0;
 }
 
@@ -101,8 +100,6 @@
 
 .c-img--concept--right {
   --x: 40px;
-  position: absolute;
-  right: 0;
 }
 
 .c-img--about {

@@ -380,7 +380,6 @@ body {
   --parallax: 0px;
   height: 120%;
   transform: translateY(var(--parallax));
-  position: absolute;
   inset: -10% 0;
 }
 
@@ -412,8 +411,6 @@ body {
 
 .c-img--concept--right {
   --x: 40px;
-  position: absolute;
-  right: 0;
 }
 
 .c-img--about {
@@ -1137,7 +1134,7 @@ body {
 .p-section__inner {
   display: flex;
   justify-content: space-between;
-  gap: 100px;
+  gap: 50px;
 }
 @media screen and (max-width: 767px) {
   .p-section__inner {

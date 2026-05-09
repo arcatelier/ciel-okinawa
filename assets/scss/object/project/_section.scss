@@ -18,7 +18,7 @@
 .p-section__inner {
   display: flex;
   justify-content: space-between;
-  gap: 100px;
+  gap: 50px;
 
   @include sp {
     flex-direction: column;
