@@ -78,10 +78,6 @@
 
 .c-img--section--concept {
   min-width: 80px;
-
-  @include sp {
-    align-items: flex-end;
-  }
 }
 
 .c-img--viewport--about {

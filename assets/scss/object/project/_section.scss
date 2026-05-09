@@ -23,11 +23,6 @@
 
 .p-section--spWrap {
   display: none;
-
-  @include sp {
-    display: flex;
-    align-items: flex-end;
-  }
 }
 
 .p-section__inner {
@@ -38,6 +33,13 @@
   @include sp {
     flex-direction: column;
     gap: 0;
+  }
+}
+
+.p-section__inner--concept {
+  @include sp {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 

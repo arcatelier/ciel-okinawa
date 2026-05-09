@@ -386,11 +386,6 @@ body {
 .c-img--section--concept {
   min-width: 80px;
 }
-@media screen and (max-width: 767px) {
-  .c-img--section--concept {
-    align-items: flex-end;
-  }
-}
 
 .c-img--viewport--about {
   flex-shrink: 0;
@@ -1149,12 +1144,6 @@ body {
 .p-section--spWrap {
   display: none;
 }
-@media screen and (max-width: 767px) {
-  .p-section--spWrap {
-    display: flex;
-    align-items: flex-end;
-  }
-}
 
 .p-section__inner {
   display: flex;
@@ -1165,6 +1154,13 @@ body {
   .p-section__inner {
     flex-direction: column;
     gap: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .p-section__inner--concept {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
