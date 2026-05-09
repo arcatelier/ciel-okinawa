@@ -445,8 +445,6 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center 20%;
-     object-position: center 20%;
 }
 
 .c-img--others {
@@ -1136,13 +1134,20 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .p-section--pcWrap {
+  .p-section.--pc {
     display: none;
   }
 }
 
-.p-section--spWrap {
+.p-section.--sp {
   display: none;
+}
+@media screen and (max-width: 767px) {
+  .p-section.--sp {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
 }
 
 .p-section__inner {
