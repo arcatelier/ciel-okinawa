@@ -55,9 +55,9 @@
 
 .c-img--section,
 .c-img--viewport {
-  max-width: 350px;
+  width: auto;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .c-img--section {
@@ -76,6 +76,14 @@
   inset: -10% 0;
 }
 
+.c-img--section--concept {
+  min-width: 80px;
+
+  @include sp {
+    align-items: flex-end;
+  }
+}
+
 .c-img--viewport--about {
   flex-shrink: 0;
 }
@@ -87,7 +95,7 @@
 }
 
 .c-img--concept {
-  max-width: 600px;
+  min-width: 400px;
   object-fit: cover;
   object-position: 45% 80%;
   --x: -40px;

@@ -15,6 +15,21 @@
   margin: 60px 0 100px;
 }
 
+.p-section--pcWrap {
+  @include sp {
+    display: none;
+  }
+}
+
+.p-section--spWrap {
+  display: none;
+
+  @include sp {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
 .p-section__inner {
   display: flex;
   justify-content: space-between;
@@ -39,7 +54,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 350px;
 
   @include sp {
     width: 100%;
@@ -47,8 +61,8 @@
   }
 }
 
-.p-section__text--right {
-  align-items: flex-end;
+.p-section__text--concept {
+  flex: 0 0 30%;
 }
 
 .p-section__button--fair {
@@ -92,6 +106,8 @@
   overflow: hidden;
   position: relative;
   justify-content: space-between;
+  width: 70%;
+  gap: 40px;
 }
 
 .p-section--textBox {

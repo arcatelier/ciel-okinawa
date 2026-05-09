@@ -81,7 +81,7 @@
 
 .c-text--concept {
   text-align: left;
-  font-size: max(2vw, 22px);
+  font-size: clamp(25px, 3vw, 40px);
   padding-right: 10px;
 }
 

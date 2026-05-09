@@ -31,7 +31,7 @@
 
 .p-imageText__title {
   color: #fff;
-  font-size: 40px;
+  font-size: clamp(20px,3.125vw,40px);
   position: absolute;
   top: 50%;
   left: 50%;
