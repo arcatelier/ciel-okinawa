@@ -1,6 +1,10 @@
 @use '../../foundation/mixin' as *;
 
 .p-headerLogo {
-  height: 75.7778px;
   width: 104.194px;
+  height: auto;
+
+  @include sp {
+    width: 90px;
+  }
 }

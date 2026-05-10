@@ -4,10 +4,10 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 500px;
+  height: 100%;
 
-  @include sp {
-    padding-top: 50px;
+  &.-full {
+    height: 120vh;
   }
 }
 

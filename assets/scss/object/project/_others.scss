@@ -4,6 +4,10 @@
   margin: 0;
   width: 100%;
   display: flex;
+
+  @include sp {
+    flex-direction: column;
+  }
 }
 
 .p-others__content {
@@ -38,6 +42,10 @@
     position: relative;
     z-index: 1;
   }
+
+  @include sp {
+    width: 100%;
+  }
 }
 
 .p-others__item--cafe {
@@ -54,4 +62,6 @@
 .p-others__textBox {
   max-width: 635px;
   text-align: left;
+  font-weight: 700;
+  letter-spacing: -1px;
 }

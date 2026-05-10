@@ -1,8 +1,15 @@
 @use '../../foundation/mixin' as *;
 
 .c-text--header {
-  padding-left: 30px;
-  font-size: 12.6479px;
+  margin-left: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -1px;
+
+  @include sp {
+    font-size: 10px;
+    margin-left: 14px;
+  }
 }
 
 .c-text--default {
@@ -38,9 +45,16 @@
   font-size: 35px;
   text-shadow: 0 3px 10px rgba(255, 255, 255, 0.8);
   position: absolute;
-  top: 30%;
+  top: 34%;
   left: 50%;
   transform: translate(-50%, -30%);
+  font-weight: 700;
+  letter-spacing: -4px;
+
+  @include sp {
+    font-size: 26px;
+    top: 22%;
+  }
 }
 
 .c-text--ContentsTitle {
@@ -48,8 +62,10 @@
 }
 
 .c-text--section {
-  padding: 50px 0;
+  margin: 50px 0;
   text-align: left;
+  font-weight: 700;
+  letter-spacing: -1px;
 
   @include sp {
     order: 2;
@@ -63,56 +79,84 @@
 }
 
 .c-text--section--largeSpace {
-  padding: 120px 0 50px;
+  margin-top: 120px;
 }
 
 .c-text--sectionLine {
-  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.1px;
 
   @include sp {
     padding-bottom: 30px;
+    font-size: 13px;
   }
 }
 
 .c-text--sectionTitle {
-  padding-top: 15px;
-  font-size: 15px;
+  margin-top: 15px;
+  font-size: 18px;
   text-align: left;
-  min-height: 80px;
+  min-height: 105px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .c-text--schedule {
-  padding-top: 15px;
-  font-size: 15px;
+  font-size: 18px;
   text-align: left;
-  color: gray;
+  color: #777;
 }
 
 .c-text--concept {
   text-align: left;
   font-size: clamp(30px, 3vw, 40px);
   padding-right: 10px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  @include sp {
+    font-size: 18px;
+  }
 }
 
 .c-text--conceptNumber {
-  font-size: 15px;
+  font-size: 16px;
+
+  @include sp {
+    font-size: 18px;
+  }
 }
 
 .c-text--about {
-  width: 50%;
   text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -1px;
+
+  @include sp {
+    font-size: 13px;
+  }
 }
 
 .c-text__aboutContents {
   padding-top: 20px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 700;
   min-height: 75px;
+  letter-spacing: -1px;
 }
 
 .c-text--columnTopic {
-  padding-top: 30px;
+  margin-top: 30px;
   font-size: 35px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.2;
+
+  @include sp {
+    font-size: 21px;
+  }
 }
 
 .c-text--subHero {
@@ -127,6 +171,8 @@
 
 .c-text--label {
   width: 40%;
+  font-size: 18px;
+  letter-spacing: -1px;
 }
 
 .c-text--telNumber {
@@ -137,15 +183,25 @@
   }
 }
 
-.c-text--label, .c-text--detail, .c-text--telNumber {
+.c-text--label,
+.c-text--detail,
+.c-text--telNumber {
   font-weight: 500;
   text-align: left;
 }
 
+.c-text--detail {
+  font-size: 18px;
+  letter-spacing: -1px;
+}
+
 .c-text--photoText {
   color: #fff;
-  padding-top: 23px;
+  margin-top: 23px;
   min-height: 70px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 18px;
 }
 
 .c-text--sectionLead {

@@ -1,7 +1,8 @@
 @use '../../foundation/mixin' as *;
 
 .p-navList {
-  padding-right: 10px;
+  padding-right: 30px;
+  overflow: visible;
 
   @include sp {
     display: none;

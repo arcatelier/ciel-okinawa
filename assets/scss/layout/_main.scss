@@ -1,7 +1,13 @@
+@use "../foundation/mixin" as *;
+
 .l-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
   text-align: center;
+
+  @include sp {
+    margin-top: 20px;
+  }
 }

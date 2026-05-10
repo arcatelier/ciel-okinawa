@@ -24,13 +24,17 @@
 .c-img--main {
   display: block;
   margin: 0 auto;
-  max-width: 720px;
-  height: 100%;
+  max-width: 60vw;
+  height: auto;
   object-fit: cover;
   transform: scale(1);
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -30%);
 
   @include sp {
-    max-width: 300px;
+    max-width: 86%;
   }
 }
 
@@ -41,10 +45,6 @@
   transform-origin: center bottom;
   display: block;
   margin: 0 auto;
-
-  @include sp {
-    height: 120vh;
-  }
 }
 
 .c-img--flower {
@@ -53,27 +53,21 @@
   object-fit: cover;
 }
 
-.c-img--section,
-.c-img--viewport {
+.c-img--section {
   width: auto;
   height: auto;
   object-fit: cover;
-}
 
-.c-img--section {
   @include sp {
     order: 1;
     max-height: 70px;
   }
 }
 
-.c-img--concept,
-.c-img--viewport {
+.c-img--concept {
   width: auto;
-  --parallax: 0px;
   height: 100%;
   transform: translateY(var(--parallax));
-  inset: -10% 0;
 }
 
 .c-img--section--concept {
@@ -95,15 +89,24 @@
 }
 
 .c-img--concept {
-  min-width: 400px;
+  object-position: 50% 50%;
+  position: absolute;
+  height: 160%;
+  width: 100%;
   object-fit: cover;
-  object-position: 45% 80%;
-  --x: -40px;
-  --y: var(--parallax);
+  inset: -25% 0;
 
   @include sp {
     max-width: 100%;
     padding-top: 30px;
+  }
+
+  &.-inset-50 {
+    inset: -50% 0;
+  }
+
+  &.-left {
+    object-position: 28% 50%;
   }
 }
 
@@ -131,7 +134,6 @@
   object-fit: cover;
 }
 
-.c-img--concept,
 .c-img--about,
 .c-img--columnImage {
   height: 100%;

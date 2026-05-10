@@ -7,17 +7,22 @@
   position: relative;
   overflow: hidden;
   color: #fff;
-  font-size: 10px;
+  font-size: 16px;
   background-color: #333;
   border-radius: 20px;
-  width: 45px;
-  height: 20px;
   z-index: 200;
-  line-height: 20px;
+  line-height: 30px;
+  padding: 0 16px;
+
+  @include sp {
+    font-size: 10px;
+    line-height: 20px;
+    padding: 0 8px;
+  }
 }
 
 .c-menuText span {
-  transition: 0.3s ;
+  transition: 0.3s;
   transform: translateY(0);
 }
 

@@ -51,69 +51,69 @@ window.addEventListener("load", () => {
    */
   function scrollZoom() {
     const heroWrapper = document.querySelector(".js-scrollWrapper");
-    const hero = document.querySelector(".js-scroll-image");
+    const hero = heroWrapper.querySelector(".js-scroll-image");
+    const heroText = heroWrapper.querySelector(".js-scroll-text");
+    const heroLogo = heroWrapper.querySelector(".js-scroll-logo");
 
     const subWrapper = document.querySelector(".js-subHeroWrapper");
     const subHero = document.querySelector(".js-subHeroImage");
 
-    // 初期状態
-    hero.style.width = "50%";
-    hero.style.transform = "scale(0.9)";
-
-    subHero.style.width = "50%";
-    subHero.style.transform = "scale(0.9)";
-
-    lenis.on("scroll", () => {
+    function update() {
       // ===== hero =====
-      // ラッパーのtopがどれだけマイナスになったかで進捗を算出（0→1）
       const wrapperTop = heroWrapper.getBoundingClientRect().top;
       const heroProgress = Math.min(Math.max(-wrapperTop / window.innerHeight, 0), 1);
 
-      // width: 50% → 100%
-      const width = 50 + heroProgress * 50;
-      // scale: 0.9 → 1.1
-      const scale = 0.9 + heroProgress * 0.2;
+      // PC
+      if (window.innerWidth >= 1025) {
+        const width = 50 + heroProgress * 50;
+        const scale = 0.6 + heroProgress * 0.4;
+        hero.style.width = `${width}%`;
+        hero.style.transform = `scale(${scale})`;
+      } else {
+        // SP
+        const width = 80 + heroProgress * 20;
+        const scale = 0.8 + heroProgress * 0.2;
+        hero.style.width = `${width}%`;
+        hero.style.transform = `scale(${scale})`;
+      }
+      // 少し下へ
+      const moveY = Math.min(heroProgress * 80, 30);
+      if (heroText) heroText.style.transform = `translate(-50%, -50%) translateY(${moveY}px)`;
+      if (heroLogo) heroLogo.style.transform = `translate(-50%, -30%) translateY(${moveY}px)`;
 
-      hero.style.width = `${width}%`;
-      hero.style.transform = `scale(${scale})`;
+      // ロゴフェードアウト
+      const opacity = Math.max(1 - heroProgress * 2, 0);
+      if (heroLogo) heroLogo.style.opacity = opacity;
 
       // ===== subHero =====
       const subTop = subWrapper.getBoundingClientRect().top;
-      const subProgress = Math.min(
-        Math.max(-subTop / window.innerHeight, 0),
-        1
-      );
+      const subProgress = Math.min(Math.max(-subTop / window.innerHeight, 0), 1);
 
-      // width: 50% → 100%
+      // width: 50 → 100
       const subWidth = 50 + subProgress * 50;
       // scale: 0.9 → 1.1
       const subScale = 0.9 + subProgress * 0.2;
 
       subHero.style.width = `${subWidth}%`;
       subHero.style.transform = `scale(${subScale})`;
-    });
+    }
+
+    update(); // 初期表示時に即適用
+    lenis.on("scroll", update);
   }
 
 
   /**
-   * スクロールしたときの画像位置固定？？
+   * スクロールに応じて画像内容を上下させるパララックス
    */
   function parallaxImage() {
     const images = document.querySelectorAll(".js-parallaxImage");
 
     images.forEach((image) => {
       const rect = image.getBoundingClientRect();
-
-      const scrollPercent =
-        (window.innerHeight - rect.top) /
-        (window.innerHeight + rect.height);
-
-      const move = (scrollPercent - 0.5) * 80;
-
-      image.style.setProperty(
-        "--parallax",
-        `${move}px`
-      );
+      const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+      const move = (scrollPercent - 0.5) * 320;
+      image.style.setProperty("--parallax", `${move}px`);
     });
   }
 

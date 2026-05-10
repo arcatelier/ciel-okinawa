@@ -6,31 +6,21 @@
   display: flex;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 80px);
-    height: 1px;
-    background-color: #ccc;
-  }
-
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    bottom: 0;
+  &.-sp-column {
+    @include sp {
+      flex-direction: column;
+    }
   }
 }
 
 .p-twoColumn__item {
   flex: 1;
   padding: 30px 30px 230px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 
   &:first-child {
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #eee;
   }
 }
 
@@ -39,6 +29,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include sp {
+    font-size: 12px;
+  }
 }
 
 .p-twoColumn__body {
@@ -54,34 +48,46 @@
 
 .p-twoColumn__textBox {
   max-width: 570px;
-  padding-top: 30px;
   text-align: left;
-  margin: 0 auto;
+  margin: 30px auto 0;
+  font-weight: 700;
+  letter-spacing: -1px;
+  font-size: 18px;
+
+  @include sp {
+    font-size: 13px;
+  }
 }
 
 .p-twoColumn__buttons {
-  padding-top: 30px;
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   max-width: 600px;
   justify-items: center;
+
+  &.-sp-row-2 {
+    @include sp {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 
 .p-twoColumn__buttons--others {
-  padding-top: 46px;
+  margin-top: 46px;
+  flex: none;
 }
 
 .p-twoColumn__information {
-  padding-top: 25px;
+  margin-top: 25px;
 }
 
 .p-twoColumn__contents {
   display: flex;
   align-items: flex-start;
-  padding-top: 20px;
+  margin-top: 20px;
 
   &:first-child {
     padding-top: 0;

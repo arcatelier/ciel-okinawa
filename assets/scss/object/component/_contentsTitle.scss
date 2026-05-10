@@ -5,6 +5,10 @@
   align-items: center;
   padding-top: 25px;
   font-size: 25px;
+
+  @include sp {
+    font-size: 12px;
+  }
 }
 
 .c-contentsTitle--right {
