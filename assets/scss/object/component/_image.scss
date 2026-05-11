@@ -11,14 +11,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: auto;
-  height: 30px;
+  height: 25px;
   padding: 0 15px;
   background-size: contain;
   background-color: #fff;
 }
 
 .c-img--side--large {
-  height: 60px;
+  height: 55px;
 }
 
 .c-img--main {
@@ -72,6 +72,7 @@
 
 .c-img--section--concept {
   min-width: 80px;
+  width: 100%;
 
   @include sp {
     max-width: 300px;
@@ -107,6 +108,19 @@
 
   &.-left {
     object-position: 28% 50%;
+  }
+
+  &.-bottom {
+    inset: -10% 0;
+    object-fit: contain;
+
+    @include sp {
+      height: auto;
+      max-height: 300px;
+      aspect-ratio: 3 / 4;
+      position: static;
+      width: 100%;
+    }
   }
 }
 

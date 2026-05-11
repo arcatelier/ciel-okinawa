@@ -112,7 +112,7 @@ window.addEventListener("load", () => {
     images.forEach((image) => {
       const rect = image.getBoundingClientRect();
       const scrollPercent = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-      const move = (scrollPercent - 0.5) * 320;
+      const move = (scrollPercent - 0.5) * 100;
       image.style.setProperty("--parallax", `${move}px`);
     });
   }

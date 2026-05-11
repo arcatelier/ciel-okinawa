@@ -155,7 +155,7 @@ body {
   width: 50%;
   display: flex;
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .c-btn--sideItem--center {
@@ -179,7 +179,6 @@ body {
 }
 
 .c-btn--footerButton {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,6 +188,9 @@ body {
 }
 .c-btn--footerButton.-full {
   min-width: 100%;
+}
+.c-btn--footerButton.-aboutContents {
+  width: 50%;
 }
 @media screen and (max-width: 767px) {
   .c-btn--footerButton {
@@ -205,6 +207,7 @@ body {
 .c-btn--footerButton--others {
   color: #fff;
   max-width: 200px;
+  width: 100%;
 }
 
 .c-btn--about {
@@ -337,14 +340,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: auto;
-  height: 30px;
+  height: 25px;
   padding: 0 15px;
   background-size: contain;
   background-color: #fff;
 }
 
 .c-img--side--large {
-  height: 60px;
+  height: 55px;
 }
 
 .c-img--main {
@@ -404,6 +407,7 @@ body {
 
 .c-img--section--concept {
   min-width: 80px;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
   .c-img--section--concept {
@@ -444,6 +448,20 @@ body {
 .c-img--concept.-left {
   -o-object-position: 28% 50%;
      object-position: 28% 50%;
+}
+.c-img--concept.-bottom {
+  inset: -10% 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 767px) {
+  .c-img--concept.-bottom {
+    height: auto;
+    max-height: 300px;
+    aspect-ratio: 3/4;
+    position: static;
+    width: 100%;
+  }
 }
 
 .c-img--concept--right {
@@ -995,7 +1013,7 @@ body {
 }
 
 .p-footerContents__image {
-  margin: 120px 0;
+  margin: 80px 0;
 }
 
 .p-footerContents__itemWrap {
@@ -1068,6 +1086,8 @@ body {
   border-radius: 5px;
   width: 450px;
   padding: 13px;
+  max-height: 100dvh;
+  overflow-y: auto;
 }
 
 .p-headerMenu--body.is-open {
@@ -1077,11 +1097,11 @@ body {
 }
 
 .p-headerMenu--main {
-  padding: 40px 0;
+  padding: 30px 0 20px;
 }
 
 .p-headerMenu--section {
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .p-headerMenu--section:last-child {
@@ -1314,7 +1334,7 @@ body {
 .p-section__inner {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  gap: 30px;
 }
 @media screen and (max-width: 767px) {
   .p-section__inner {
@@ -1323,10 +1343,10 @@ body {
   }
 }
 .p-section__inner.-gap-200 {
-  gap: 200px;
+  gap: clamp(40px, 7vw, 200px);
 }
 .p-section__inner.-gap-300 {
-  gap: 300px;
+  gap: clamp(40px, 10vw, 300px);
 }
 
 @media screen and (max-width: 767px) {
@@ -1339,6 +1359,7 @@ body {
 .p-section__info {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 @media screen and (max-width: 767px) {
   .p-section__info {
@@ -1387,9 +1408,9 @@ body {
     order: 2;
     overflow-x: auto;
   }
-}
-.p-section__contentsWrap.-sp-column {
-  flex-direction: column;
+  .p-section__contentsWrap.-sp-column {
+    flex-direction: column;
+  }
 }
 
 .p-section__content {
@@ -1494,7 +1515,7 @@ body {
 }
 
 .p-sns--box {
-  margin-top: 30px;
+  margin-top: 15px;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -1595,7 +1616,7 @@ body {
   margin: 30px auto 0;
   font-weight: 700;
   letter-spacing: -1px;
-  font-size: 18px;
+  font-size: 17px;
 }
 @media screen and (max-width: 767px) {
   .p-twoColumn__textBox {

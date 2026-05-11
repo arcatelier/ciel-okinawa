@@ -42,7 +42,7 @@
 .p-section__inner {
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  gap: 30px;
 
   @include sp {
     flex-direction: column;
@@ -50,11 +50,11 @@
   }
 
   &.-gap-200 {
-    gap: 200px;
+    gap: clamp(40px, 7vw, 200px);
   }
 
   &.-gap-300 {
-    gap: 300px;
+    gap: clamp(40px, 10vw, 300px );
   }
 }
 
@@ -68,6 +68,7 @@
 .p-section__info {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   @include sp {
     display: contents;
@@ -114,10 +115,10 @@
     width: 100%;
     order: 2;
     overflow-x: auto;
-  }
 
-  &.-sp-column {
-    flex-direction: column;
+    &.-sp-column {
+      flex-direction: column;
+    }
   }
 }
 
