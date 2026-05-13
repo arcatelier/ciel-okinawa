@@ -175,6 +175,10 @@
   display: flex;
   justify-content: center;
   margin-top: 25px;
+
+  @include sp {
+    margin-top: 20px;
+  }
 }
 
 .p-section__about {
@@ -195,6 +199,8 @@
 
   @include sp {
     flex-direction: column;
+    padding-top: 30px;
+    gap: 50px;
   }
 }
 

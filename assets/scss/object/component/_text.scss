@@ -57,10 +57,6 @@
   }
 }
 
-.c-text--ContentsTitle {
-  font-size: 15px;
-}
-
 .c-text--section {
   margin: 50px 0;
   text-align: left;
@@ -71,6 +67,7 @@
     order: 2;
     font-size: max(1.3rem, 10px);
     margin: 20px 0;
+    width: 60%;
   }
 }
 
@@ -90,7 +87,7 @@
 
   @include sp {
     padding-bottom: 30px;
-    font-size: 17px;
+    font-size: max(1rem, 17px);
   }
 }
 
@@ -113,11 +110,12 @@
   text-align: left;
   font-size: clamp(30px, 3vw, 40px);
   padding-right: 10px;
-  line-height: 1.2;
+  line-height: 1.5;
   font-weight: 700;
+  width: 100%;
 
   @include sp {
-    font-size: 35px;
+    font-size: max(1.5rem, 30px);
   }
 }
 
@@ -136,7 +134,8 @@
   letter-spacing: -1px;
 
   @include sp {
-    font-size: 13px;
+    font-size: clamp(13px, 3.5vw, 20px);
+    padding-top: 20px;
   }
 }
 
@@ -146,6 +145,11 @@
   font-weight: 700;
   min-height: 75px;
   letter-spacing: -1px;
+
+  @include sp {
+    width: 19rem;
+    text-align: center;
+  }
 }
 
 .c-text--columnTopic {
@@ -156,7 +160,8 @@
   line-height: 1.2;
 
   @include sp {
-    font-size: 21px;
+    font-size: clamp(20px, 4vw, 30px);
+    letter-spacing: 0;
   }
 }
 

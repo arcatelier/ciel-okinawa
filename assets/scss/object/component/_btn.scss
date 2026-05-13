@@ -60,13 +60,21 @@
   }
 
   &.-aboutContents {
-    width: 50%;
+    width: 30%;
   }
 
   @include sp {
     margin: 0;
     order: 4;
     min-width: 150px;
+    width: 90%;
+  }
+
+  &.-episode:last-child {
+    @include sp {
+      grid-column: 1 / -1;
+      width: 45%;
+    }
   }
 }
 

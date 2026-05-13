@@ -31,11 +31,15 @@
 
 .p-imageText__title {
   color: #fff;
-  font-size: clamp(20px,3.125vw,40px);
+  font-size: clamp(20px, 6vw, 40px);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include sp {
+    font-size: clamp(30px, 8.5vw, 45px);
+  }
 }
 
 .p-imageText__title,.p-imageText__number {
