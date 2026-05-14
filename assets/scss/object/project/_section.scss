@@ -119,6 +119,7 @@
 
     &.-sp-column {
       flex-direction: column;
+      margin-bottom: 130px;
     }
   }
 }
@@ -135,6 +136,7 @@
 
   @include sp {
     flex: 0 0 70%;
+    align-items: center;
   }
 }
 

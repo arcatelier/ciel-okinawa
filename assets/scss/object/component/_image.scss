@@ -60,7 +60,7 @@
 
   @include sp {
     order: 1;
-    max-height: 70px;
+    max-height: 120px;
   }
 }
 
@@ -87,6 +87,10 @@
   max-width: 100%;
   aspect-ratio: 1 /1;
   object-fit: cover;
+
+  @include sp {
+    min-width: 90%;
+  }
 }
 
 .c-img--concept {

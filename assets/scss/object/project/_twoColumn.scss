@@ -79,6 +79,10 @@
 .p-twoColumn__buttons--others {
   margin-top: 46px;
   flex: none;
+
+  @include sp {
+    margin-top: 0;
+  }
 }
 
 .p-twoColumn__information {
