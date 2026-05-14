@@ -1496,6 +1496,8 @@ body {
   }
   .p-section__contentsWrap.-sp-column {
     flex-direction: column;
+  }
+  .p-section__contentsWrap.-others {
     margin-bottom: 130px;
   }
 }
