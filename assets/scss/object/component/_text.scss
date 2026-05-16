@@ -53,7 +53,7 @@
   white-space: nowrap;
 
   @include sp {
-    font-size: 26px;
+    font-size: clamp(15px, 7vw, 26px);
     top: 22%;
     white-space: normal;
   }
@@ -67,7 +67,6 @@
 
   @include sp {
     order: 2;
-    font-size: max(1.3rem, 10px);
     margin: 20px 0;
   }
 }
@@ -92,7 +91,7 @@
 
   @include sp {
     padding-bottom: 30px;
-    font-size: max(1rem, 17px);
+    font-size: clamp(10px, 1vw, 17px);
   }
 }
 
@@ -124,7 +123,7 @@
   width: 100%;
 
   @include sp {
-    font-size: max(1.5rem, 30px);
+    font-size: clamp(20px, 8vw, 30px);
   }
 }
 
@@ -184,8 +183,9 @@
   transform: translate(-50%, -30%);
 
   @include sp {
-    font-size: clamp(15px, 3.5vw, 30px);
-    white-space: normal
+    font-size: clamp(14px, 4vw, 26px);
+    white-space: normal;
+    letter-spacing: -1px;
   }
 }
 
@@ -222,6 +222,10 @@
   font-weight: 700;
   letter-spacing: -1px;
   font-size: 18px;
+
+  @include sp {
+    font-size: clamp(10px, 5vw, 17px);
+  }
 }
 
 .c-text--sectionLead {
@@ -231,6 +235,11 @@
 
 .c-text--sectionText {
   padding-bottom: 40px;
+
+  @include sp {
+    text-align: left;
+    font-size: clamp(15px, 4vw, 18px);
+  }
 }
 
 .c-text--footerLead {

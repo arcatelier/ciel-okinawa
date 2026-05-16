@@ -71,7 +71,7 @@
   &.-sp-row-2 {
     @include sp {
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: clamp(10px, 4vw, 20px);
     }
   }
 }

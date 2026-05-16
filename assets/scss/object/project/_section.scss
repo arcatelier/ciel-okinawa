@@ -155,6 +155,7 @@
     flex-direction: row-reverse;
     align-items: flex-start;
     width: 100%;
+    gap: clamp(15px, 6vw, 30px);
   }
 }
 

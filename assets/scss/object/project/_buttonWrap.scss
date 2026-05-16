@@ -6,8 +6,8 @@
   width: 100%;
 
   @include sp {
-    padding: 0 30px;
     gap: 40px;
     order: 4;
+    justify-content: center;
   }
 }

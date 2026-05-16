@@ -66,7 +66,7 @@
   @include sp {
     margin: 0;
     order: 4;
-    min-width: 150px;
+    min-width: 120px;
     width: 90%;
   }
 
@@ -92,6 +92,10 @@
   color: #fff;
   max-width: 200px;
   width: 100%;
+
+  @include sp {
+    margin: 0 auto;
+  }
 }
 
 .c-btn--about {
@@ -146,7 +150,7 @@
 
 .c-btn--default--primary {
   display: block;
-  font-size: max(1rem, 14px);
+  font-size: clamp(10px,4vw,14px);
 }
 
 .c-btn--hover {

@@ -48,9 +48,10 @@
 }
 
 .c-img--flower {
-  height: 40px;
-  width: 40px;
+  height: clamp(20px, 5vw, 40px);
+  width: clamp(20px, 5vw, 40px);
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .c-img--section {
@@ -61,6 +62,7 @@
   @include sp {
     order: 1;
     max-height: 120px;
+    max-width: 60%;
   }
 }
 
@@ -144,6 +146,10 @@
 
 .c-img--columnTitle {
   padding-top: 25px;
+
+  @include sp {
+    max-width: 60%;
+  }
 }
 
 .c-img--columnImage {
@@ -160,6 +166,12 @@
 .c-img--others {
   display: block;
   height: 400px;
+
+  @include sp {
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+  }
 }
 
 .c-img--photoLogo {
@@ -174,6 +186,14 @@
   padding-top: 30px;
   display: block;
   margin: 0;
+
+  @include sp {
+    max-width: none;
+    width: clamp(120px, 50vw, 200px);
+    object-fit: contain;
+    padding-top: clamp(10px, 7vw, 30px);
+    height: auto;
+  }
 }
 
 .c-img--party {
@@ -182,6 +202,10 @@
   height: auto;
   object-fit: cover;
   flex-shrink: 1;
+
+  @include sp {
+    width: clamp(50px, 35%, 200px);
+  }
 }
 
 .c-img--monoLogo {
