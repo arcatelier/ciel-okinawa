@@ -620,6 +620,12 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media screen and (max-width: 767px) {
+  .c-img--monoLogo {
+    max-width: 140px;
+    width: 100%;
+  }
+}
 
 .c-img--sns {
   width: 20px;
@@ -1165,6 +1171,9 @@ body {
 
 .p-footerContents__image {
   margin: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .p-footerContents__image {
@@ -1199,12 +1208,12 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .p-footerImage {
-    max-height: 60vh;
+    max-height: 70vh;
   }
 }
 @media screen and (max-width: 767px) {
   .p-footerImage {
-    max-height: 50vh;
+    max-height: 60vh;
   }
 }
 
