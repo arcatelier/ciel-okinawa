@@ -1777,7 +1777,8 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-tagList {
-    width: 80%;
+    width: 100%;
+    max-width: none;
   }
 }
 

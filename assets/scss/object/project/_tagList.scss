@@ -8,7 +8,8 @@
   max-width: 290px;
 
   @include sp {
-    width: 80%;
+    width: 100%;
+    max-width: none;
   }
 }
 
