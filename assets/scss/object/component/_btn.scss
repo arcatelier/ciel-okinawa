@@ -160,10 +160,6 @@
   @include tab {
     font-size: clamp(10px, 3vw, 12px);
   }
-
-  @include sp {
-    font-size: clamp(8px, 4vw, 10px);
-  }
 }
 
 .c-btn--hover {
@@ -183,6 +179,7 @@
   transform: translateY(100%);
   transition: transform 0.3s;
   font-size: 15px;
+  white-space: nowrap;
 }
 
 .c-btn--item:hover .c-arrow,
