@@ -187,8 +187,8 @@
   transform: translate(-50%, -30%);
 
   @include sp {
-    font-size: clamp(14px, 4vw, 26px);
-    white-space: normal;
+    font-size: clamp(15px, 7vw, 26px);
+    white-space: nowrap;
     letter-spacing: -1px;
   }
 }
@@ -197,13 +197,17 @@
   width: 40%;
   font-size: 18px;
   letter-spacing: -1px;
+
+  @include sp {
+    font-size: 15px;
+  }
 }
 
 .c-text--telNumber {
   font-size: 40px;
 
-  @include tab {
-    font-size: 20px;
+  @include sp {
+    font-size: 30px;
   }
 }
 
