@@ -154,10 +154,15 @@
 
 .c-btn--default--primary {
   display: block;
-  font-size: clamp(10px, 4vw, 14px);
+  font-size: clamp(8px, 4vw, 14px);
+  white-space: nowrap;
 
   @include tab {
     font-size: clamp(10px, 3vw, 12px);
+  }
+
+  @include sp {
+    font-size: clamp(8px, 4vw, 10px);
   }
 }
 

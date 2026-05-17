@@ -302,11 +302,17 @@ body {
 
 .c-btn--default--primary {
   display: block;
-  font-size: clamp(10px, 4vw, 14px);
+  font-size: clamp(8px, 4vw, 14px);
+  white-space: nowrap;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .c-btn--default--primary {
     font-size: clamp(10px, 3vw, 12px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .c-btn--default--primary {
+    font-size: clamp(8px, 4vw, 10px);
   }
 }
 
