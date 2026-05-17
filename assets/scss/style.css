@@ -310,6 +310,11 @@ body {
     font-size: clamp(10px, 3vw, 12px);
   }
 }
+@media screen and (max-width: 767px) {
+  .c-btn--default--primary {
+    font-size: clamp(8px, 3vw, 10px);
+  }
+}
 
 .c-btn--hover {
   position: absolute;
