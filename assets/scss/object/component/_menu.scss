@@ -27,11 +27,19 @@
 .c-menu--default {
   display: block;
   font-size: 20px;
+
+  @include sp {
+    font-size: 15px;
+  }
 }
 
 .c-menu--default--sideFooter {
   display: block;
   font-size: 15px;
+
+  @include sp {
+    font-size: clamp(10px, 3vw, 13px);
+  }
 }
 
 .c-menu--hover {

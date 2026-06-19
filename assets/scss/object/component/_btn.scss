@@ -24,6 +24,7 @@
   width: 50%;
   display: flex;
   align-items: center;
+  text-align: start;
   padding-bottom: 5px;
 }
 
@@ -43,8 +44,12 @@
 .c-btn--sideText {
   display: inline-block;
   position: relative;
-  padding: 0 10px 0 30px;
   font-size: 15px;
+  font-weight: 600;
+
+  @include sp {
+    font-size: 13px;
+  }
 }
 
 .c-btn--footerButton {

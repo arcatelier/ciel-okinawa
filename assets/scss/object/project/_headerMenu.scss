@@ -25,6 +25,11 @@
   padding: 13px;
   max-height: 100dvh;
   overflow-y: auto;
+
+  @include sp {
+    min-width: 300px;
+    width: 90%;
+  }
 }
 
 .p-headerMenu--body.is-open {

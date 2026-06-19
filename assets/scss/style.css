@@ -172,6 +172,7 @@ body {
   width: 50%;
   display: flex;
   align-items: center;
+  text-align: start;
   padding-bottom: 5px;
 }
 
@@ -191,8 +192,13 @@ body {
 .c-btn--sideText {
   display: inline-block;
   position: relative;
-  padding: 0 10px 0 30px;
   font-size: 15px;
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  .c-btn--sideText {
+    font-size: 13px;
+  }
 }
 
 .c-btn--footerButton {
@@ -403,9 +409,19 @@ body {
   background-size: contain;
   background-color: #fff;
 }
+@media screen and (max-width: 767px) {
+  .c-img--side {
+    height: 15px;
+  }
+}
 
 .c-img--side--large {
   height: 55px;
+}
+@media screen and (max-width: 767px) {
+  .c-img--side--large {
+    height: 30px;
+  }
 }
 
 .c-img--main {
@@ -651,11 +667,13 @@ body {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -1px;
+  flex: 1;
 }
 @media screen and (max-width: 767px) {
   .c-text--header {
-    font-size: 10px;
-    margin-left: 14px;
+    font-size: clamp(8px, 3vw, 13px);
+    line-height: 1.5;
+    margin-left: 10px;
   }
 }
 
@@ -976,10 +994,20 @@ body {
   display: block;
   font-size: 20px;
 }
+@media screen and (max-width: 767px) {
+  .c-menu--default {
+    font-size: 15px;
+  }
+}
 
 .c-menu--default--sideFooter {
   display: block;
   font-size: 15px;
+}
+@media screen and (max-width: 767px) {
+  .c-menu--default--sideFooter {
+    font-size: clamp(10px, 3vw, 13px);
+  }
 }
 
 .c-menu--hover {
@@ -1116,6 +1144,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .c-topic__img {
+    min-width: 80px;
     max-width: 140px;
     width: 100%;
     height: 100%;
@@ -1244,6 +1273,8 @@ body {
 
 .p-headerWrap {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .p-headerLogo {
@@ -1252,7 +1283,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-headerLogo {
-    width: 90px;
+    width: 60px;
   }
 }
 
@@ -1281,6 +1312,12 @@ body {
   padding: 13px;
   max-height: 100dvh;
   overflow-y: auto;
+}
+@media screen and (max-width: 767px) {
+  .p-headerMenu--body {
+    min-width: 300px;
+    width: 90%;
+  }
 }
 
 .p-headerMenu--body.is-open {

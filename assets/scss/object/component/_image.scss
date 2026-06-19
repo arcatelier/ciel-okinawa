@@ -15,10 +15,18 @@
   padding: 0 15px;
   background-size: contain;
   background-color: #fff;
+
+  @include sp {
+    height: 15px;
+  }
 }
 
 .c-img--side--large {
   height: 55px;
+
+  @include sp {
+    height: 30px;
+  }
 }
 
 .c-img--main {
