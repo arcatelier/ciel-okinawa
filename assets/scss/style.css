@@ -1171,6 +1171,10 @@ body {
   gap: 10px;
 }
 
+.c-topic__row--bottom {
+  text-align: start;
+}
+
 .c-topic__information {
   border: gray 1px solid;
   border-radius: 20px;
@@ -1434,7 +1438,7 @@ body {
 }
 
 .p-heroWrapper {
-  height: 200vh;
+  height: 100vh;
 }
 
 .p-navList {
