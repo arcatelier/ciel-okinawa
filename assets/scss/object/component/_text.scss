@@ -274,4 +274,8 @@
 .c-text--footer {
   font-size: 13px;
   color: #fff;
+
+  @include sp {
+    font-size: 10px;
+  }
 }

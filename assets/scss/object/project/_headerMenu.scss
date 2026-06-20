@@ -27,8 +27,10 @@
   overflow-y: auto;
 
   @include sp {
-    min-width: 300px;
-    width: 90%;
+    width: calc(100% - 20px);
+    max-width: 450px;
+    right: -100%;
+    transform: none;
   }
 }
 
@@ -36,6 +38,11 @@
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0);
+
+  @include sp {
+    right: 0;
+    transform: none;
+  }
 }
 
 .p-headerMenu--main {

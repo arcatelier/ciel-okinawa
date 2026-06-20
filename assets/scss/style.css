@@ -30,6 +30,11 @@ body.is-show {
   opacity: 1;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: source-han-serif-japanese, serif;
   opacity: 0;
@@ -957,6 +962,11 @@ body {
   font-size: 13px;
   color: #fff;
 }
+@media screen and (max-width: 767px) {
+  .c-text--footer {
+    font-size: 10px;
+  }
+}
 
 .c-listItem {
   display: flex;
@@ -1226,9 +1236,7 @@ body {
 .p-footerContents__itemWrap {
   position: absolute;
   bottom: 0;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
+  width: 100%;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -1315,8 +1323,10 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-headerMenu--body {
-    min-width: 300px;
-    width: 90%;
+    width: calc(100% - 20px);
+    max-width: 450px;
+    right: -100%;
+    transform: none;
   }
 }
 
@@ -1324,6 +1334,12 @@ body {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0);
+}
+@media screen and (max-width: 767px) {
+  .p-headerMenu--body.is-open {
+    right: 0;
+    transform: none;
+  }
 }
 
 .p-headerMenu--main {
@@ -1830,7 +1846,7 @@ body {
 }
 
 .p-subHeroWrapper {
-  height: 200vh;
+  height: 100vh;
 }
 
 .p-tagList {
