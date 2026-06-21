@@ -61,7 +61,8 @@ window.addEventListener("load", () => {
     function update() {
       // ===== hero =====
       const wrapperTop = heroWrapper.getBoundingClientRect().top;
-      const heroProgress = Math.min(Math.max(-wrapperTop / window.innerHeight, 0), 1);
+      const heroMaxScroll = heroWrapper.offsetHeight - window.innerHeight;
+      const heroProgress = Math.min( Math.max((-wrapperTop / heroMaxScroll) * 1.1, 0),1);
 
       // PC
       if (window.innerWidth >= 1025) {
@@ -87,7 +88,8 @@ window.addEventListener("load", () => {
 
       // ===== subHero =====
       const subTop = subWrapper.getBoundingClientRect().top;
-      const subProgress = Math.min(Math.max(-subTop / window.innerHeight, 0), 1);
+      const subMaxScroll = subWrapper.offsetHeight - window.innerHeight;
+      const subProgress = Math.min( Math.max((-subTop / subMaxScroll) * 1.1, 0),1);
 
       // width: 50 → 100
       const subWidth = 50 + subProgress * 50;

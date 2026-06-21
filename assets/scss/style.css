@@ -1435,10 +1435,11 @@ body {
   height: 100vh;
   position: sticky;
   top: 0;
+  overflow: hidden;
 }
 
 .p-heroWrapper {
-  height: 100vh;
+  height: 150vh;
 }
 
 .p-navList {
@@ -1611,6 +1612,11 @@ body {
   margin: 200px 0;
   border-top: none;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .p-section__columnList {
+    margin: 100px 0;
+  }
 }
 
 .p-section--wrap {
@@ -1850,7 +1856,7 @@ body {
 }
 
 .p-subHeroWrapper {
-  height: 100vh;
+  height: 150vh;
 }
 
 .p-tagList {
@@ -1900,6 +1906,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .p-twoColumn.-sp-column {
+    margin-top: 100px;
     flex-direction: column;
   }
 }

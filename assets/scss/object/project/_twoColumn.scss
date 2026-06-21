@@ -8,6 +8,7 @@
 
   &.-sp-column {
     @include sp {
+      margin-top: 100px;
       flex-direction: column;
     }
   }

@@ -13,6 +13,10 @@
   margin: 200px 0;
   border-top: none;
   position: relative;
+
+  @include sp {
+    margin: 100px 0;
+  }
 }
 
 .p-section--wrap {
